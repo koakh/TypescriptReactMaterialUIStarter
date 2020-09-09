@@ -13,10 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, Route, Switch, useLocation } from 'react-router-dom';
+import useDimensions from 'react-use-dimensions';
 import { ActionTypes, useDispatch } from '../../app/state';
 import { defaultDrawerListItemIcon, drawerWidth, routes } from '../../config/constants';
 import { DrawerListItem, DrawerSections } from '../../types';
-import useDimensions from 'react-use-dimensions';
 
 interface ResponsiveDrawerProps {
   title: string;
