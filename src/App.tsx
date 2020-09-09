@@ -4,20 +4,8 @@ import './App.css';
 import { Provider } from './app/state';
 import ResponsiveDrawer from './components/layout/ResponsiveDrawer';
 import { drawerCategories, drawerTitle } from './config/constants';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import { Theme } from '@material-ui/core/styles';
-
-const theme: Theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: purple[900],
-    },
-    secondary: {
-      main: '#f44336',
-    },
-  },
-});
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import {theme} from './app/theme';
 
 const App: React.FC = () => {
   return (
