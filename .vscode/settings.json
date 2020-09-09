@@ -1,0 +1,9 @@
+{
+  "cSpell.words": [
+    "ZXing",
+    "splitted"
+  ],
+  "files.exclude": {
+    "node_modules/**": true
+  }
+}
