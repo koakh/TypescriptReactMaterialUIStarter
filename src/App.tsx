@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import { Provider } from './app/state';
-import ResponsiveDrawer from './components/layout/ResponsiveDrawer';
+import { ResponsiveDrawer } from './components/layout/ResponsiveDrawer';
 import { drawerCategories, drawerTitle } from './config/constants';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import {theme} from './app/theme';
+import { theme } from './app/theme';
 
 const App: React.FC = () => {
   return (

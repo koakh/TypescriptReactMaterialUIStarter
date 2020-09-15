@@ -56,3 +56,7 @@ useEffect(() => {
   // React Hook useEffect has a missing dependency: 'init'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
 });
 ```
+
+## Theme
+
+- [Migrando da v0.x para v1](https://material-ui.com/pt/guides/migration-v0x/#where-should-i-start-in-a-migration)

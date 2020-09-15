@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
+export const ResponsiveDrawer = (props: ResponsiveDrawerProps) => {
   // hooks
   const classes = useStyles();
   const theme = useTheme();
@@ -66,14 +66,16 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   const location = useLocation();
   const dispatch = useDispatch();
   // useCallback for optimization, could be omitted if child components don’t rely on shallow comparing.
-  const setWidth = useCallback((width) => dispatch({ type: ActionTypes.setShellWidth, width }), [dispatch]);
+  const setWidth = useCallback((width) => dispatch({ type: ActionType.SET_SHELL_WIDTH, payload: { width } }), [dispatch]);
   const { title, categories } = props;
   const drawerSections: DrawerListItem[][] = [];
 
   useEffect(() => {
     const margin: number = 48;
-    const shellWidth: number = Math.trunc(mobileOpen ? width - drawerWidth - margin : width - margin);
-    setWidth(shellWidth);
+    if (!isNaN(width)) {
+      const shellWidth: number = Math.trunc(mobileOpen ? width - drawerWidth - margin : width - margin);
+      setWidth(shellWidth);
+    }
     return () => { };
   }, [mobileOpen, width, setWidth])
 
